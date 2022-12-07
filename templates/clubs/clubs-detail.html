@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<a href="{% url 'clubs-list' %}">Go back</a>
+<h3>Details about {{ clubs.club_name }}</h3>
+<br>
+<h5>Added By: {{ clubs.purchaser.first_name }} {{ club.purchaser.last_name }}</h5>
+<br><br>
+<p>{{ clubs.club_name }}</p>
+<br><br>
+<a href="{% url 'clubs-update' clubs.pk %}">+ Update club</a>
+<a href="{% url 'clubs-delete' clubs.pk %}">+ Delete club</a>
+
+{% endblock content %}

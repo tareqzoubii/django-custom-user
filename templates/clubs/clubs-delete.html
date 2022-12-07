@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<h3>Delete Club</h3>
+<form method="post" class="uniForm">
+  {% csrf_token %}
+  <p>Do you really want to delete "{{ clubs.club_name }}"?</p>
+  <input type="submit" value="OK">
+  <br>
+  <a href="{% url 'clubs-list' %}">No,Go back</a>
+</form>
+{% endblock content %}
